@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Montana NA Service Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Simple focus style */
+        a:focus, button:focus {
+            outline: 2px solid #3b82f6;
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo/Title -->
+                <div class="flex-shrink-0 flex flex-col justify-center">
+                    <span class="text-xl font-bold text-blue-800">Montana NA Service Portal</span>
+                    <span class="text-xs text-gray-500 uppercase tracking-wide">Provided by the SM&TS Committee</span>
+                </div>
+                
+                <!-- Desktop Nav -->
+                <div class="hidden md:ml-6 md:flex md:space-x-8">
+                    <a href="#welcome" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Welcome</a>
+                    <a href="#workspace" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-blue-600 hover:border-gray-300 hover:text-blue-800">Service Tools</a>
+                    <a href="#resources" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Resources</a>
+                    <a href="#get-involved" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Get Involved</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="-mr-2 flex items-center md:hidden">
+                    <button id="mobile-menu-button" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
+                        <span class="sr-only">Open main menu</span>
+                        <svg id="icon-open" class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg id="icon-close" class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div class="hidden md:hidden bg-white shadow-lg" id="mobile-menu">
+            <div class="pt-2 pb-3 space-y-1">
+                <a href="#welcome" class="block pl-3 pr-4 py-3 border-l-4 border-transparent text-base font-medium text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800">Welcome</a>
+                <a href="#workspace" class="block pl-3 pr-4 py-3 border-l-4 border-transparent text-base font-medium text-blue-600 hover:bg-gray-50 hover:border-gray-300 hover:text-blue-800">Service Tools</a>
+                <a href="#resources" class="block pl-3 pr-4 py-3 border-l-4 border-transparent text-base font-medium text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800">Resources</a>
+                <a href="#get-involved" class="block pl-3 pr-4 py-3 border-l-4 border-transparent text-base font-medium text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800">Get Involved</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Hero / Welcome Section -->
+        <section id="welcome" class="bg-blue-800 text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 text-center">
+                <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl mb-6">Empowering Your Service</h1>
+                <p class="mt-4 text-xl text-blue-100 max-w-3xl mx-auto">
+                    The Shared Member & Technical Services (SM&TS) Committee leverages grants from Google, Microsoft, Canva, and Cloudflare to provide world-class tools to the Montana fellowship.
+                </p>
+                <div class="mt-10 flex justify-center gap-4">
+                    <a href="#workspace" class="px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-700 bg-white hover:bg-blue-50 md:py-4 md:text-lg md:px-10">
+                        Explore Tools
+                    </a>
+                    <a href="mailto:support@namontana.org" class="px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-4 md:text-lg md:px-10">
+                        Request Access
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+            <!-- SERVICE TOOLS & WORKSPACE GUIDE -->
+            <section id="workspace" class="mb-20 scroll-mt-24">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-900">Service Tools & Resources</h2>
+                    <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+                        We have been incredibly generously endowed with resources. Whether you need to write a proposal, design a convention flyer, or build an AI-powered app for the fellowship, we have the tools for you.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+                    
+                    <!-- Part 1: How to Access -->
+                    <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-200">
+                        <div class="flex items-center mb-6">
+                            <div class="bg-blue-100 rounded-full p-3 mr-4">
+                                <svg class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900">Accessing Your Workspace</h3>
+                        </div>
+                        
+                        <div class="prose text-gray-600 text-sm space-y-4">
+                            <p>Most tools require an <strong>@namontana.org</strong> account. This grants you access to Google Workspace Enterprise, Canva Pro, and our Cloud/AI infrastructure.</p>
+                            
+                            <ul class="space-y-2 mt-4">
+                                <li class="flex items-center">
+                                    <svg class="h-4 w-4 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                                    Log in at <a href="https://accounts.google.com" target="_blank" class="text-blue-600 hover:underline ml-1">accounts.google.com</a>
+                                </li>
+                                <li class="flex items-center">
+                                    <svg class="h-4 w-4 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                                    Use your provided email (e.g., <em>chair@namontana.org</em>)
+                                </li>
+                                <li class="flex items-center">
+                                    <svg class="h-4 w-4 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                                    Set up mandatory 2-Step Verification
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Part 2: Essential Tools Dashboard -->
+                    <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-200">
+                        <div class="flex items-center mb-6">
+                            <div class="bg-yellow-100 rounded-full p-3 mr-4">
+                                <svg class="h-6 w-6 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900">Essential Workspace</h3>
+                        </div>
+
+                        <div class="overflow-hidden rounded-lg border border-gray-200">
+                            <table class="min-w-full text-sm text-left">
+                                <tbody class="divide-y divide-gray-100 bg-white">
+                                    <tr class="hover:bg-gray-50 transition-colors">
+                                        <td class="px-4 py-3 font-medium text-gray-900">Docs, Sheets & Slides</td>
+                                        <td class="px-4 py-3 text-right">
+                                            <a href="https://docs.google.com" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium">Launch &rarr;</a>
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50 transition-colors">
+                                        <td class="px-4 py-3 font-medium text-gray-900">Shared Drive Storage</td>
+                                        <td class="px-4 py-3 text-right">
+                                            <a href="https://drive.google.com" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium">Launch &rarr;</a>
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50 transition-colors">
+                                        <td class="px-4 py-3 font-medium text-gray-900">Google Meet (Video)</td>
+                                        <td class="px-4 py-3 text-right">
+                                            <a href="https://meet.google.com" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium">Launch &rarr;</a>
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50 transition-colors">
+                                        <td class="px-4 py-3 font-medium text-gray-900">Chat & Spaces</td>
+                                        <td class="px-4 py-3 text-right">
+                                            <a href="https://chat.google.com" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium">Launch &rarr;</a>
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50 transition-colors bg-purple-50">
+                                        <td class="px-4 py-3 font-medium text-purple-900 flex items-center">
+                                            <svg class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                                            Gemini AI Assistant
+                                        </td>
+                                        <td class="px-4 py-3 text-right">
+                                            <a href="https://gemini.google.com" target="_blank" class="text-purple-700 hover:text-purple-900 font-medium">Launch &rarr;</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Expanded Tool Suites -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    
+                    <!-- Creative Suite -->
+                    <div class="bg-gradient-to-br from-pink-50 to-rose-50 p-6 rounded-lg border border-pink-100 shadow-sm">
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Creative & Web Studio</h3>
+                        <p class="text-sm text-gray-600 mb-4">Design flyers, create websites, and publish content.</p>
+                        <ul class="space-y-3">
+                            <li class="bg-white p-3 rounded shadow-sm flex justify-between items-center">
+                                <div>
+                                    <span class="block font-medium text-gray-900">Google Sites</span>
+                                    <span class="text-xs text-gray-500">Simple websites. We can add a custom URL (e.g., area.namontana.org).</span>
+                                </div>
+                                <a href="https://sites.google.com" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm font-medium">Go &rarr;</a>
+                            </li>
+                            <li class="bg-white p-3 rounded shadow-sm flex justify-between items-center">
+                                <div>
+                                    <span class="block font-medium text-gray-900">Canva Pro</span>
+                                    <span class="text-xs text-gray-500">Premium design templates & tools.</span>
+                                </div>
+                                <span class="text-xs text-gray-400 font-medium">Request Access</span>
+                            </li>
+                            <li class="bg-white p-3 rounded shadow-sm flex justify-between items-center">
+                                <div>
+                                    <span class="block font-medium text-gray-900">Affinity Suite</span>
+                                    <span class="text-xs text-gray-500">Professional Photo, Designer, & Publisher.</span>
+                                </div>
+                                <span class="text-xs text-gray-400 font-medium">Request License</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Innovation/Dev Suite -->
+                    <div class="bg-gradient-to-br from-indigo-50 to-blue-50 p-6 rounded-lg border border-indigo-100 shadow-sm">
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Innovation Lab & Cloud</h3>
+                        <p class="text-sm text-gray-600 mb-4">For developers building apps for the fellowship.</p>
+                        <ul class="space-y-3">
+                            <li class="bg-white p-3 rounded shadow-sm flex justify-between items-center">
+                                <div>
+                                    <span class="block font-medium text-gray-900">Firebase Studio</span>
+                                    <span class="text-xs text-gray-500">App hosting, databases, and auth.</span>
+                                </div>
+                                <a href="https://console.firebase.google.com" target="_blank" class="text-indigo-600 hover:text-indigo-800 text-sm font-medium">Console &rarr;</a>
+                            </li>
+                            <li class="bg-white p-3 rounded shadow-sm flex justify-between items-center">
+                                <div>
+                                    <span class="block font-medium text-gray-900">Microsoft Azure</span>
+                                    <span class="text-xs text-gray-500">$4,000/yr in credits for AI/Infrastructure.</span>
+                                </div>
+                                <a href="https://portal.azure.com" target="_blank" class="text-indigo-600 hover:text-indigo-800 text-sm font-medium">Portal &rarr;</a>
+                            </li>
+                            <li class="bg-white p-3 rounded shadow-sm flex justify-between items-center">
+                                <div>
+                                    <span class="block font-medium text-gray-900">Google Cloud / Vertex AI</span>
+                                    <span class="text-xs text-gray-500">Enterprise AI models and compute.</span>
+                                </div>
+                                <a href="https://console.cloud.google.com" target="_blank" class="text-indigo-600 hover:text-indigo-800 text-sm font-medium">Console &rarr;</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- GENERAL RESOURCES -->
+            <section id="resources" class="mb-20 scroll-mt-24">
+                <h2 class="text-3xl font-bold text-gray-900 mb-8 pb-2 border-b border-gray-200">Shared Resources</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    
+                    <!-- Asset Inventory Card -->
+                    <a href="./asset_inventory.html" target="_blank" class="group block p-6 bg-white rounded-lg shadow-sm border border-gray-200 hover:shadow-md hover:border-blue-300 transition-all">
+                        <h3 class="text-lg font-bold text-gray-900 group-hover:text-blue-700">Digital Asset Inventory &rarr;</h3>
+                        <p class="mt-2 text-sm text-gray-600">Access the regional "Capacity Map" of domains, hosting, and software licenses. Useful for understanding what technology we currently own.</p>
+                    </a>
+                    
+                    <!-- Website Admin -->
+                    <div class="block p-6 bg-white rounded-lg shadow-sm border border-gray-200">
+                        <h3 class="text-lg font-bold text-gray-900">Website Administration</h3>
+                        <p class="mt-2 text-sm text-gray-600">Trusted servants responsible for content updates on <span class="font-mono text-xs bg-gray-100 px-1">namontana.org</span> can log in here.</p>
+                        <button class="mt-4 text-sm font-medium text-blue-600 hover:text-blue-800">Login to CMS &rarr;</button>
+                    </div>
+
+                    <!-- Document Library -->
+                    <div class="block p-6 bg-white rounded-lg shadow-sm border border-gray-200">
+                        <h3 class="text-lg font-bold text-gray-900">Document Library</h3>
+                        <p class="mt-2 text-sm text-gray-600">Regional guidelines, policy documents, and archives of past minutes available for download.</p>
+                        <button class="mt-4 text-sm font-medium text-blue-600 hover:text-blue-800">Browse Library &rarr;</button>
+                    </div>
+
+                    <!-- Help Desk -->
+                    <div class="block p-6 bg-blue-50 rounded-lg shadow-sm border border-blue-100">
+                        <h3 class="text-lg font-bold text-blue-900">IT Help Desk</h3>
+                        <p class="mt-2 text-sm text-blue-700">Having trouble with your email? Need a page updated? Submit a ticket to the SM&TS team.</p>
+                        <button class="mt-4 px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded hover:bg-blue-700">Submit Request</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ABOUT THE COMMITTEE (Get Involved) -->
+            <section id="get-involved" class="mb-12 scroll-mt-24">
+                <div class="bg-gray-900 rounded-2xl overflow-hidden shadow-xl text-white">
+                    <div class="md:flex">
+                        <div class="p-8 md:p-12 md:w-2/3">
+                            <h2 class="text-3xl font-bold mb-4">About the SM&TS Committee</h2>
+                            <p class="text-gray-300 mb-6">
+                                We are a resource for the entire fellowship. Our mission is to maintain the technical infrastructure that allows addicts to find meetings, events, and recovery literature.
+                            </p>
+                            
+                            <h3 class="text-xl font-semibold text-white mb-4">Our Workgroups</h3>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-gray-300">
+                                <div class="bg-gray-800 p-4 rounded-lg">
+                                    <strong class="text-blue-400 block mb-1">Infrastructure</strong>
+                                    Servers, DNS, App Development, & Security.
+                                </div>
+                                <div class="bg-gray-800 p-4 rounded-lg">
+                                    <strong class="text-blue-400 block mb-1">Website & Content</strong>
+                                    Design, UX, and keeping the meeting list current.
+                                </div>
+                                <div class="bg-gray-800 p-4 rounded-lg">
+                                    <strong class="text-blue-400 block mb-1">Training & Support</strong>
+                                    Helping members learn to use these tools.
+                                </div>
+                            </div>
+
+                            <div class="mt-8">
+                                <p class="mb-4 font-medium">Want to be of service? We need help!</p>
+                                <a href="mailto:smts@namontana.org" class="inline-block bg-white text-gray-900 font-bold py-2 px-6 rounded hover:bg-gray-100 transition-colors">
+                                    Contact the Committee
+                                </a>
+                            </div>
+                        </div>
+                        <div class="bg-gray-800 p-8 md:p-12 md:w-1/3 border-t md:border-t-0 md:border-l border-gray-700">
+                            <h3 class="text-xl font-bold mb-4">Contacts</h3>
+                            <ul class="space-y-4 text-sm text-gray-300">
+                                <li>
+                                    <span class="block text-gray-500 text-xs uppercase">Committee Chair</span>
+                                    <a href="mailto:chair@namontana.org" class="hover:text-white transition-colors">chair@namontana.org</a>
+                                </li>
+                                <li>
+                                    <span class="block text-gray-500 text-xs uppercase">Web Contact</span>
+                                    <a href="mailto:web@namontana.org" class="hover:text-white transition-colors">web@namontana.org</a>
+                                </li>
+                                <li>
+                                    <span class="block text-gray-500 text-xs uppercase">General Info</span>
+                                    <a href="mailto:info@namontana.org" class="hover:text-white transition-colors">info@namontana.org</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center">
+            <p class="text-sm text-gray-500">
+                Montana Region of Narcotics Anonymous &copy; <span id="current-year"></span>
+            </p>
+            <p class="text-xs text-gray-400 mt-2 max-w-lg mx-auto">
+                The SM&TS Committee is directly accountable to the Montana Region Service Committee. 
+                We provide these tools to assist in our primary purpose.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle logic
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const iconOpen = document.getElementById('icon-open');
+        const iconClose = document.getElementById('icon-close');
+        let isMenuOpen = false;
+
+        menuButton.addEventListener('click', () => {
+            isMenuOpen = !isMenuOpen;
+            if (isMenuOpen) {
+                mobileMenu.classList.remove('hidden');
+                iconOpen.classList.add('hidden');
+                iconClose.classList.remove('hidden');
+            } else {
+                mobileMenu.classList.add('hidden');
+                iconOpen.classList.remove('hidden');
+                iconClose.classList.add('hidden');
+            }
+        });
+
+        // Close mobile menu when a link is clicked
+        mobileMenu.addEventListener('click', (event) => {
+            if (event.target.tagName === 'A') {
+                isMenuOpen = false;
+                mobileMenu.classList.add('hidden');
+                iconOpen.classList.remove('hidden');
+                iconClose.classList.add('hidden');
+            }
+        });
+
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
